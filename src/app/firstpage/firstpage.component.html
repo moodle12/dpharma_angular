@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;font-family: Arial, Helvetica, sans-serif;}
+        body{background-color: #111;}
+        header{position: absolute;top: 0;left: 0;width: 100%;display: flex;justify-content: space-between;
+        padding: 40px 100px;align-items: center;z-index: 1000;}
+        header.logo{position: relative; font-size: 30px;color: #fff;text-decoration: none;
+        text-transform: capitalize;font-weight: 700px;letter-spacing: 2px;}
+        header.log{color: #fff;text-decoration: none;}
+        .banner{position: relative;width: 100%;height: 100vh; padding: 0px 100px;
+        display: flex;justify-content: flex-start;align-items: center;}
+        .banner:before{
+            content: '';
+            position: absolute;
+            top: 0;right: 0;
+            width: 400px;height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .banner video{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;opacity: 1;}
+        .banner .txt{position: relative;max-width: 550px;z-index: 2;}
+        .banner .txt h2{color: #fff;font-size: 50px;}
+        .banner .txt p{color:white;font-size: 20px;margin: 5px 0 25px;}
+        .banner .txt a{position: relative;text-decoration:none;display: inline-block;background:#fff;margin-left: 40px;}
+        .banner .vbox{position: relative;width: 100%;height: 400px;background-color: #fff;margin-left: 40px;} 
+        .banner .video{opacity: 1;}
+    </style>
+</head>
+<body>
+    <header>
+       <img src="assets/images/logo.jfif" alt="" height="120px" width="100px">
+        <button class="btn btn-success" (click)="goToPage('login')">LOGIN</button>   
+    </header>
+    <div class="banner">
+        <video src="assets/videos/medical.mp4" muted autoplay loop type="assets/videos/medical.mp4"></video>
+        <div class="txt">
+            <h2>D-Pharma</h2>
+            <p>
+                D Pharmaceuticals is an established pharmaceutical based at Gujarat.
+                 We are into Franchisee marketing of (Finished Dosage Formulations) & have own Marketing, Sales, Distribution team at Gujarat. 
+                 We Ethically promote the scientific products to various specialities such as., Dermatologists, Gynecologists, Pediatrics, General Medicine, Surgeons, Orthopaedicians, Cardiologists , Diabetologists etc.,
+                  We strongly believe in Quality & ensure that all the products are FDA certified.
+            </p>
+        </div>
+        <div class="vbox">
+            <video src="assets/videos/medical.mp4" muted autoplay loop  controls type="assets/videos/medical.mp4"></video>
+        </div>
+        <ul class="sci">
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

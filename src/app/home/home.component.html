@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive D-Pharma Web Page</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> D-Pharma. </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#doctors">doctors</a>
+        <a href="#book">book</a>
+        <a  (click)="goToPage('products')">Products</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="assets/images/home-img.svg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>stay safe, stay healthy</h3>
+        <p>D-Pharmaceuticals provides wide range of medicines for your better health.</p>
+        <a class="btn" (click)="goToPage('contactus')"> contact us <span class="fas fa-chevron-right"></span> </a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>140+</h3>
+        <p>doctors at work</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1040+</h3>
+        <p>satisfied patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>500+</h3>
+        <p>bed facility</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>80+</h3>
+        <p>available hospitals</p>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>free checkups</h3>
+            <p>Get Your Check-Up Done Right Away Only At D-Pharmaceuticals !</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 ambulance</h3>
+            <p>Ambulane Availabe 24/7 Only At D-Pharmaceuticals !</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>expert doctors</h3>
+            <p>Expert Doctors Having Wide Range Of Experience Working At D-Pharmaceuticals!</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>medicines</h3>
+            <p>Wide Range Of Medicines Only At D-Pharmaceuticals !</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <h3>bed facility</h3>
+            <p>Numerous Beds Availabe At D-Pharmaceuticals !</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>total care</h3>
+            <p>We Take Full Care Of Our Customer And Treat Them With Total Care At D-Pharmaceuticals !</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- about section starts  -->
+
+<!-- <section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="assets/images/about-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>we take care of your healthy life</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section> -->
+
+<!-- about section ends -->
+
+<!-- doctors section starts  -->
+
+<section class="doctors" id="doctors">
+
+    <h1 class="heading"> our <span>doctors</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="assets/images/doc-1.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/doc-2.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/doc-3.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/doc-4.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/doc-5.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/doc-6.jpg" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- doctors section ends -->
+
+<!-- booking section starts   -->
+
+<section class="book" id="book">
+
+    <h1 class="heading"> <span>book</span> now </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="assets/images/book-img.svg" alt="">
+        </div>
+
+        <form action="">
+            <h3>book appointment</h3>
+            <input type="text" placeholder="your name" class="box">
+            <input type="number" placeholder="your number" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="date" class="box">
+            <input type="submit" value="book now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- booking section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+    
+    <h1 class="heading"> client's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="assets/images/pic-1.png" alt="">
+            <h3>David Lalor</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">"D Pharmaceuticals has been a godsend. I've saved about 80 percent on my medications.!"</p>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/pic-2.png" alt="">
+            <h3>Hayley Parker</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">"The Doctors At D-Pharmaceuticals Are Simply Life Savers And Taking Care Of Their patients Is Their primary responsiblity which is commendable!"</p>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/pic-3.png" alt="">
+            <h3>john wick</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">"The Medicines Provided By D-Pharmaceuticals Are extremely reasonable and there is no scope of error from the side of d-pharma which is the best thing!"</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/blog-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/blog-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/blog-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+        </div>
+
+        <!-- <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+        </div> -->
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91-8980227172</a>
+            <a href="#"> <i class="fas fa-phone"></i> +91-9664858715 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> topiwalamahmood@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> shahshivam@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Gujarat, india -  </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.instagram.com/p/CUF_wpIrkeO/?utm_medium=share_sheet"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>mr. web designer</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js">
+    let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
+</script>
+
+</body>
+</html>
+<!-- <div class="preloader">
+
+	 Top Header_Area 
+	<section class="top_header_area">
+	    <div class="container">
+            <ul class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+                <!-- <li><a href="tel:+91 94444 95296"><i class="fa fa-phone"></i>+91 94444 95296</a></li> 
+                <ul class="nav navbar-nav navbar-right">
+                <li id="sty" class="pe-5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                  </svg> Dpharmacueticals@yahoo.co.in</li>
+                <br>
+                <li class="text-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>Mon - Sat 10:00 AM - 07:30 PM</li>
+                  </ul>
+            </ul>
+            
+            
+	    </div>
+	</section>
+    <br>
+    <br>
+    <br>
+   <div>
+    <nav id="head" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.jfif" alt="" width="90" height="78" class="d-inline-block align-text-top">
+            <span id="logo"> D-Pharma</span>
+          </a>
+          <li id="au"><a (click)="goToPage('aboutus')">About Us</a></li>
+          <li id="prod"><a (click)="goToPage('products')" >Products</a></li>
+          <li id="con"><a (click)="goToPage('contactus')">Contact Us</a></li>
+        </div>
+      </nav>
+            <script type="text/javascript">
+                function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+                }   
+                </script>
+                <script> 
+                $col=getRandomColor();
+                document.write(getRandomColor()); 
+                </script>
+                <marquee height="90" bgcolor="orange" style="color: 'document.write(getRandomColor())'; font-size: 20pt; font-weight: bold">
+                D-Pharma Home Page
+                </marquee>
+                </div>
+       
+	 End Header_Area 
+    <div class="container p_xs">
+        <div class="col-md-8 col-sm-12 col-xs-12" style="padding-left: 0px;margin: 20px 0px 0px 0px;">
+            start
+           
+                    <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div data-u="thumb">
+                    <img src="img/gallery/980x380/031-s190x90.jpg" />
+                   <div class="title_back"></div>
+                    <div class="title_button_all">
+                            Personal Care
+                        </div>
+                </div>
+            </div>
+            <div>
+                <div id="sliderh2_container" class="sliderh2" style="position: relative; top: 0px; left: 0px; width: 1100px;
+                    height: 400px;">
+                        <p id="change">
+                            The environmental effect of pharmaceuticals and personal care products (PPCPs) is being investigated since at least the 1990s. <br> 
+                            PPCPs include substances used by individuals for personal health or cosmetic reasons and the products used by agribusiness to boost growth <br>
+                             or health of livestock. <br>
+                             More than twenty million tons of PPCPs are produced every year. <br>
+                             The European Union has declared pharmaceutical residues with the potential of contamination of water and soil to be "priority substances" <br>
+                        </p>
+                        <p id="change">
+                            Personal care includes products as diverse as cleansing pads, colognes, cotton swabs, cotton pads, <br>
+                             deodorant, eye liner, facial tissue, hair clippers, lip gloss, lipstick, lip balm, lotion, makeup, <br>
+                             hand soap, facial cleanser, body wash, nail files, pomade, perfumes, razors, shaving cream, <br>
+                              moisturizer, baby powder, toilet paper, toothpaste, facial treatments, wet wipes, towels, and shampoo. <br>
+                              <br>
+                              <br>
+                              <span id="upper">We at D-Pharmaceuticals provide all these products needed for your best Personal Care.</span>
+                        </p>
+                     Slides Container 
+                    <div data-u="slides" style="position: absolute; left: 0px; top: 0px; width: 1100px; height: 400px;
+                        overflow: hidden;">
+                        <div><img height="100" width="200" data-u="image" src="assets/images/slide1.jfif" /></div>
+                        <div><img height="100" width="200" data-u="image" src="assets/images/slide2.jpg" /></div>
+                        <div><img height="100" width="200" data-u="image" src="assets/images/slide3.jfif" /></div>
+                        <div><img height="100" width="200" data-u="image" src="assets/images/slide4.jpg" /></div>
+                        
+                    </div>
+                    <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                            
+                        </div>
+                    </div>
+                    #endregion Bullet Navigator Skin End 
+                </div>
+                <hr class="it">
+                <div data-u="thumb">
+                    <img src="img/gallery/980x380/032-s190x90.jpg" />
+                     <div class="title_back"></div> -->
+                    <!-- <div class="title_button_all">
+                        Pharmaceutical
+                    </div>
+                </div>
+            </div>
+            <div> 
+                <div id="sliderh3_container" class="sliderh3" style="position: relative; top: 0px; left: 0px; width: 1100px;
+                    height: 400px;">
+                    <p id="change">
+                        Pharmaceutical products consist of active ingredients, <br>
+                         which are combined with additional materials (excipients) selected to control dosage delivery, <br>
+                         enhance performance and facilitate manufacture. <br>
+                        The synthesis of processes for the production of the active ingredient, especially for small molecule substances, <br>
+                         is a classical reaction path selection and process synthesis problem but is made more challenging because of the need for impurity minimization. <br>
+                          The specifics of the product design subproblem will, of course, differ depending on the product form, for instance, solid oral, injectable, or topical. <br>
+                           While pharmaceutical product design is at root a formulation design problem it is complicated by the constraints imposed by the manufacturing operations, <br>
+                            the need to facilitate patient compliance and the requirements for achieving desired therapeutic performance. <br>
+                    </p>
+                    <p id="change">
+                        Pharmaceutical products are essential to save one’s life in the world when it gets delivered to the right place with right time. <br>
+                         The medical institution or patients wait for such drugs from the supplier, and it is important to deliver the drugs with recommended temperature conditions. <br>
+                          The cold chain logistics follows specific sensitivity of the medicines and adjusts the temperature and humidity settings as per norm. <br>
+                          <br>
+                          <br>
+                     <span id="upper"> D-Pharmaceuticals have wide range of Pharmaceutical Products.</span>  
+                    </p>
+
+                    Slides Container 
+                    <div data-u="slides" style="position: absolute; left: 0px; top: 0px; width: 1100px; height: 400px;
+                        overflow: hidden;">
+                        <div><img height="100" data-u="image" src="assets/images/pharma.jfif" /></div>
+                        <div><img height="100" data-u="image" src="assets/images/i1.jfif" /></div>
+                        <div><img height="100" data-u="image" src="assets/images/i2.jfif" /></div>
+                    </div>
+                    <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                            
+                        </div>
+                    </div>
+                    #endregion Bullet Navigator Skin End
+                </div>
+                <hr class="it">
+                <div data-u="thumb">
+                     <img src="img/gallery/980x380/033-s190x90.jpg" /> 
+                    <div class="title_back"></div>
+                    <div class="title_button_all">
+                        Health Care
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+             <div>
+                <div id="sliderh4_container" class="sliderh4" style="position: relative; top: 0px; left: 0px; width: 1100px;
+                    height: 400px;">
+                    <p id="change">
+                        Healthcare has become one of India’s largest sector, both in terms of revenue and employment. <br>
+                         Healthcare comprises hospitals, medical devices, clinical trials, outsourcing, telemedicine, medical tourism, <br>
+                          health insurance and medical equipment. <br>
+                           The Indian healthcare sector is growing at a brisk pace due to its strengthening coverage, <br>
+                            services and increasing expenditure by public as well private players. <br>
+                            </p>
+                    <p id="change">
+                        Indian healthcare delivery system is categorised into two major components  public and private. <br>
+                        The Government, i.e. public healthcare system, comprises limited secondary and tertiary care institutions in key cities <br>
+                        and focuses on providing basic healthcare facilities in the form of primary healthcare centres (PHCs) in rural areas. <br>
+                        The private sector provides majority of secondary, tertiary, and quaternary care institutions with major concentration <br>
+                        in metros and tier I and tier II cities. <br>
+                    </p>
+                    <p id="change">
+                        Disposable & home healthcare products with us includes urinary catheters, dry powder inhalers, prefillable syringes, <br>
+                         oral care products, blood analyzers, insulin pumps, stainless steel needles, pre-loaded disposable staple applicators, <br>
+                          and brace hardware, among many others. <br>
+                          <br>
+                          <br>
+                          <span id="diff">ONLY AVAILABE  AT  D-PHARMA</span> 
+                    </p>
+
+                    <div data-u="slides" style="position: absolute; left: 0px; top: 0px; width: 1100px; height: 400px;
+                        overflow: hidden;">
+                        <div><img height="100" width="200" data-u="image" src="assets/images/hc1.jpg" /></div>
+                        <div><img height="100 " width="200" data-u="image" src="assets/images/hc2.png" /></div>
+                        <div><img height="100" width="200" data-u="image" src="assets/images/hc3.jfif" /></div>
+                        <div><img height="100" width="200" data-u="image" src="assets/images/hc4.jpg" /></div>
+                        
+                        
+                    </div>
+                    <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <hr class="it">
+        <div data-u="thumb">
+            <div class="title_back"></div>
+            <div class="title_button_all">
+                Anti Fungal
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="sliderh5_container" class="sliderh5" style="position: relative; top: 0px; left: 0px; width: 1100px;
+            height: 400px;">
+            <p id="change">
+                An antifungal medication, also known as an antimycotic medication, is a pharmaceutical fungicide or fungistatic used to treat <br>
+                 and prevent mycosis such as athlete's foot, ringworm, candidiasis (thrush), serious systemic infections such as cryptococcal meningitis, and others. <br>
+                  Such drugs are usually obtained by a doctor's prescription, but a few are available over the counter <br>
+            </p>
+            <p id="change">
+                There are two types of antifungals: local and systemic. Local antifungals are usually administered topically or vaginally, <br>
+                 depending on the condition being treated. <br>
+                 Systemic antifungals are administered orally or intravenously. <br>
+                 Of the clinically employed azole antifungals, only a handful are used systemically.  <br>
+                 These include ketoconazole, itraconazole, fluconazole, fosfluconazole, voriconazole, posaconazole, and isavuconazole. <br>
+                Examples of non-azole systemic antifungals include griseofulvin and terbinafine <br>
+                <br>
+                <br>
+                <span id="upper">BEST QUALITY ANTI-FUNGAL PRODUCTS ONLY AT D-PHARMA</span>
+            </p>
+            <div data-u="slides" style="position: absolute; left: 0px; top: 0px; width: 1100px; height: 400px;
+                overflow: hidden;">
+                <div><img width="100" height="100" data-u="image" src="assets/images/af1.jfif" /></div>
+                <div><img width="100" height="100" data-u="image" src="assets/images/ag2.jpg" /></div>
+                <div><img width="100" height="100" data-u="image" src="assets/images/af3.jpeg" /></div>
+                
+            </div>
+            
+            <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                </div>
+            </div>
+        </div>
+    
+
+<hr class="it">
+
+<div class="col-md-4 hidden-sm hidden-xs" style="padding-right: 0px;">
+    <div style="text-align: center; margin-top: 10px; border: 2px solid #cbcbcb; padding: 10px;border-radius: 10px;">
+        <h4 style="    line-height: 30px; padding: 0px 3px 10px 3px;color: #fb0425;">Download D pharmaceuticals Android App for Price List and to Book Order.</h4>
+        <a href="https://play.google.com/store/apps/details?id=com.good.pharma" target="_blank" style="cursor: pointer;"><img height="200" width="100" src="assets/images/and2.png" style="width:100%;border-radius: 10px;"></a>
+    </div>
+    <div class="Categories">
+        <div class="subtittle sub_tit wow fadeInUp">
+                <h2>Our Range Of Categories</h2>
+            </div>
+        <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Anesthetic</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Anti-Cancer</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Anti-Malarial</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Anti-Obesity</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Anti Biotics</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Urology</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Ointments</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg> Eye/Ear Drops</li>
+
+<li class="view_a" style="border-bottom: none;font-weight: bold;"><a href="#"> View All &gt;&gt;</a></li>
+
+  <a href="#" class="button_all view_but">View All</a>
+
+        </ul>
+
+    </div>
+</div>
+
+     
+
+ About Us Area
+<section class="about_us_area row">
+    <div class="container">
+        
+        <div class="row about_row">
+            <div class="who_we_area col-md-8 col-sm-6" id="pharma">
+                <div class="subtittle wow fadeInUp">
+                    <h2>D Pharmaceuticals</h2>
+                </div>
+                <p style="text-align: justify;">D Pharmaceuticals is an established pharmaceutical based at Gujarat. We are into Franchisee marketing of (Finished Dosage Formulations) & have own Marketing, Sales, Distribution team at Gujarat. We Ethically promote the scientific products to various specialities such as., Dermatologists, Gynecologists, Pediatrics, General Medicine, Surgeons, Orthopaedicians, Cardiologists , Diabetologists etc., We strongly believe in Quality & ensure that all the products are FDA certified. We have a fully operational office including Infrastructure, Logistics, Sales, Marketing, Delivery people etc who are working as a Team round the clock in ensuring quality medicines at affordable prices reach the common man.<br><br>Apart from this we have a very loyal team of Franchise’s across all the districts of Gujarat. Being a very ambitious company we have recently forayed into Pan India operations with Dermatology division. We are making our presence felt in the Franchisee marketing, which is an upcoming field, & wish to contribute to the good health of the masses.</p>
+                    <a href="about_us.html" class="button_all">Read More</a>
+                </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<section style="padding:20px 0px;">
+    <div class="container" id="wi">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="assets/images/san.jfif" style="border: 3px solid #f6b60b;width:100%;">
+                <br><br><br>
+                <div style="text-align:right;">
+                    <a href="hand_sanitizer.html" style="border: 1px solid #dea40b; padding: 10px 20px; background: #f6b60b; color: #060606; font-size: 16px; font-weight: 900; border-radius: 30px;">View all Products</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="">
+                     <h2 style=" font-size: 32px !important;  font-weight: 800 !important; font-family: sans-serif !important;"> Hand Sanitizer</h2>
+                 </div>
+                 <br>
+                <p style="margin:10px 10px 10px 20px;text-align:justify;text-indent:20px;">California today's newsletter featured an expert who advises readers to sanitize their groceries and vegetables to minimize risk of <b>Corona Virus.</b> Experts also advise against putting bleach on anything you are going to eat.Virus transfer risk is high if the fruits & vegetables aren't properly as there is a possibility of some one carrying the virus sneeze into the food product and with in hours you touching it. Bleach is not meant to be used to clean fruits or vegetables. The infection of any amount of bleach can be major health hazard.</p>
+                <h3>The Safe Way to Wash Fruits & Vegetables</h3>
+                <ul style="padding-left: 20px;margin:15px;list-style-image: url(images/sani.png);">
+                    <li style="margin-bottom: 10px;">A safe way to wash fruits & vegatables and keep yourself safe from Corona Viruses</li>
+                    <li style="margin-bottom: 10px;">neem extract safely cleans and clearly keeps fruits and vegetables safe for consumption</li>
+                    <li style="margin-bottom: 10px;"> Chlorhexidine has proven ability to kill both bacteria and viruses</li>
+                    <li style="margin-bottom: 10px;">Chlorhexidine Gluconate an antimicrobial agent which mitigates the risk of disease and makes vegetables free from pathogen load</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feed">
+<div class="que">
+    <a href="enquiry.html"><img height="200" width="500" src="assets/images/feed3.jpg"></a>
+</div>
+<div class="testi" style="border: 2px dotted blue;">
+           <div>
+        <h2 style="color: red">Testimonials</h2>
+    </div>
+    <div><b><i>Rahul Says...</i></b></div><br>
+    <div><b>"D Pharmaceuticals has been a godsend. I've saved about 80 percent on my medications."</b><br><br><br></div>
+</div>
+</section>
+<section class="our_partners_area">
+    <div class="book_now_aera">
+        <div class="container">
+            <div class="row book_now">
+                <div class="col-md-10 booking_text">
+                    <br>
+                    <br>
+                    <br>
+                    <h4>Send Your Business Enquiry</h4>
+                    <p>Once we receive your enquiry, we will contact you in 24-48 hours to find out how we can best meet your needs.</p>
+                </div>
+                <div class="col-md-2 p0 book_bottun">
+                    <br>
+                    <br>
+                    <br>
+                    <a href="business_enquiry.html" class="button_all">enquiry now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ End Our Partners Area 
+
+ Footer Area 
+<footer class="footer_area">
+    <div class="container">
+        <div class="footer_row row">
+            <div class="col-md-3 col-sm-6 footer_about">
+                <h2><span style="color: #f6b60b">D</span> PHARMACEUTICAL</h2>
+                <p style="padding-top: 0px;">We are driven by our vision to distribute a wide range of good quality, affordable medicines trusted by health care professional and patients across the country </p>
+            </div>
+            <div class="col-md-3 col-sm-6 footer_about quick">
+                <h2>Quick links</h2>
+                <ul class="quick_link">
+                    <li><a href="index.html"><i class="fa fa-chevron-right"></i>Home</a></li>
+                    <li><a href="management.html"><i class="fa fa-chevron-right"></i>About Us</a></li>
+                    <li><a href="invision_medi_sciences.html"><i class="fa fa-chevron-right"></i>Products</a></li>
+                    <li><a href="services.html"><i class="fa fa-chevron-right"></i>Services</a></li>
+                    <li><a href="business_enquiry.html"><i class="fa fa-chevron-right"></i>Enquiry</a></li>
+                    <li><a href="C:\Users\hafsa\dpharma\src\app\contactus\contactus.component.html" (click)="goToPage('contactus')"><i class="fa fa-chevron-right"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 footer_about">
+                <h2>CONTACT US</h2>
+                <address>
+                    <p>Have questions, comments or just want to say hello:</p>
+                    <ul class="my_address">
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>sales@dpharmaceuticals.com</a></li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>079 23828128</a></li>
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>New No.105A, Old No.43 A, Patel Road(Lane), Perambur, Chennai </span></a></li>
+                    </ul>
+                </address>
+                <!-- <h2>Testimonials</h2>
+                <a href="#" class="twitter">Thank you so much for all the caring customer service. You’re doing a great job of helping me streamline our business and always going the extra mile for us.</a> -->
+                <!-- <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a> -->
+            <!-- </div>
+            <div class="col-md-3 col-sm-6 footer_about">
+                 <img src="image/foot.jpg"> 
+                <h2>OUR OFFICE</h2>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8400045455255!2d80.24366521482351!3d13.10932029076561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzMzLjYiTiA4MMKwMTQnNDUuMSJF!5e0!3m2!1sen!2sin!4v1589607608533!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+</div> 
+ End Footer Area -->
+
+    

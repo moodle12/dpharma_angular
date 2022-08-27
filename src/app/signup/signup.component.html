@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .error {
+            color: red;
+        }
+
+        table {
+            background-color: azure;
+            border-spacing: 1px;
+        }
+
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="signup">
+            <h2>Signup form</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="/action_page.php" name="reg">
+                        <div class="form-group">
+                            <label for="email">FirstName:</label>
+                            <input type="text" class="form-control" id="firstName" onkeyup="validateFirstName()"
+                                placeholder="Enter firstname" name="firstName">
+                            <p class="error" id="firstNameError"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" onblur="validateEmail()"
+                                placeholder="Enter email" name="email">
+                            <p class="error" id="emailError"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                name="password">
+                            <p class="error" id="passwordError"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pwd">DoB:</label>
+                            <input type="date" class="form-control" id="dob" placeholder="Enter DOB"
+                                name="dob">
+                            <p class="error" id="dobError"></p>
+                        </div>
+
+
+                        <button type="button" class="btn btn-primary" onclick="saveData()">Submit</button>
+                    </form>
+                    <a href="#" onclick="loginForm()">Login</a>
+                </div>
+                <!--col md 6-->
+            </div> <!-- row-->
+        </div> <!-- main signup form-->
+
+
+        <div id="login" style="display: none;">
+            <h2>Login form</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="/action_page.php" name="login">
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                            <p class="error" id="emailError"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                name="password">
+                            <p class="error" id="passwordError"></p>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="authenticate()">Login</button>
+                    </form>
+                    <a href="#" onclick="signupForm()">Signup</a>
+                </div>
+                <!--col md 6-->
+            </div> <!-- row-->
+        </div> <!-- main login form div-->
+
+
+        <div id="mytable" style="display: none;">
+            <br>
+            <a onclick="logout()">Logout</a>
+            <br>
+        </div>
+    </div>
+    <!--container-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+
+        //class User 
+        var users = []
+        let dummy1 = { userId: 1224, firstName: "Shivam", email: "Shivam@gmail.com", password: "12345678" }
+        let dummy2 = { userId: 4568, firstName: "Mahmood", email: "Mahmood@gmail.com", password: "12345678" }
+        let dummy3 = { userId: 6782, firstName: "Shruti", email: "Shruti@gmail.com", password: "12345678" }
+        let dummy4 = { userId: 1468, firstName: "Deep", email: "Deep@gmail.com", password: "12345678" }
+        let dummy5 = { userId: 4278, firstName: "Vaishvi", email: "Vaishvi@gmail.com", password: "12345678" }
+
+        users.push(dummy1)
+        users.push(dummy2)
+        users.push(dummy3)
+        users.push(dummy4)
+        users.push(dummy5)
+
+        function saveData() {
+            let firstName = document.reg.firstName.value;
+            let email = document.reg.email.value;
+            let password = document.reg.password.value;
+
+            let isError = false; // no error 
+            let error = "";
+
+            var onlyAlphabets = /^[a-zA-Z]+$/; //a-z A-Z atleat 1 char or n char  
+            var onlyDigits = /^[0-9]+$/; // 0 - 9 [ minmum 1 time max n time]
+            var emailReg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+            if (firstName == undefined || firstName.trim().length == 0) {
+                isError = true; // error     
+                error = error + "Please Enter FirstName\n";
+                document.getElementById("firstNameError").innerHTML = "Please Enter FirstName"
+            } else if (onlyAlphabets.test(firstName) == false) {
+                document.getElementById("firstNameError").innerHTML = "Please Enter Only alphabets [ a-z or A-Z ] "
+                isError = true;
+            }
+            else {
+                document.getElementById("firstNameError").innerHTML = ""
+            }
+
+            if (email == undefined || email.trim().length == 0) {
+                isError = true; // error     
+                error = error + "Please Enter Email\n";
+                document.getElementById("emailError").innerHTML = "Please Enter Email"
+
+            } else if (emailReg.test(email) == false) {
+                isError = true;
+                document.getElementById("emailError").innerHTML = "Invalid Email"
+            }
+            else {
+                document.getElementById("emailError").innerHTML = ""
+            }
+
+            if (password == undefined || password.trim().length == 0) {
+                isError = true; // error     
+                error = error + "Please Enter password\n";
+                document.getElementById("passwordError").innerHTML = "Please Enter Password"
+
+            } else if (password.length < 8) {
+                isError = true;
+                document.getElementById("passwordError").innerHTML = "Atleast 8 combination needed"
+            } else {
+                document.getElementById("passwordError").innerHTML = ""
+            }
+
+            // XXX @ XXX . XXX 
+            //A-Z a-z 
+            //0-9 
+            //regex 
+
+            if (isError == false) {
+
+                let userId = parseInt(Math.random() * 100000);
+                let user = { userId: userId, firstName: firstName, email: email, password: password };
+                users.push(user);
+                document.reg.reset()
+                toastr.success("Signup done...", "", { timeOut: 3000 })
+
+            }
+        }
+
+
+    //    function loginForm() {
+    //         let signup = document.getElementById("signup");
+    //         signup.style.display = "none"
+    //         let login = document.getElementById("login");
+    //         login.style.display = "block"
+    //     }
+        function signupForm() {
+            let signup = document.getElementById("signup");
+            signup.style.display = "block"
+            let login = document.getElementById("login");
+            login.style.display = "none"
+        }
+
+        function authenticate() {
+            let email = document.login.email.value;
+            let password = document.login.password.value;
+            isValid = false
+            //validation 
+
+            for (let i = 0; i < users.length; i++) {
+                let user = users[i];
+                if (email == user.email && password == user.password) {
+                    isValid = true
+                    break
+                }
+            }
+
+
+            if (isValid) {
+
+                let login = document.getElementById("login");
+                login.style.display = "none"
+                toastr.success("Welcome ", "", { timeOut: 3000 })
+
+                loadTable();
+
+            } else {
+                alert("Invalid Credentials!!!");
+            }
+
+
+
+
+        }
+
+        function loadTable() {
+            console.log("loading table");
+            document.getElementById("mytable").style.display = "block";
+            let table = document.createElement("table")
+            table.setAttribute("id","myDataTable")
+            let thead = document.createElement("thead")
+            let tbody = document.createElement("tbody")
+
+            table.appendChild(thead)
+            table.appendChild(tbody)
+
+
+            let r1 = document.createElement("tr")
+
+            let th1 = document.createElement("th")
+            th1.innerHTML = "UserId"
+
+            let th2 = document.createElement("th")
+            th2.innerHTML = "FirstName"
+
+            let th3 = document.createElement("th")
+            th3.innerHTML = "Email"
+
+            let th4 = document.createElement("th")
+            th4.innerHTML = "Password"
+
+            let th5 = document.createElement("th")
+            th5.innerHTML = "Action"
+
+
+            r1.appendChild(th1)
+            r1.appendChild(th2)
+            r1.appendChild(th3)
+            r1.appendChild(th4)
+            r1.appendChild(th5)
+
+            thead.appendChild(r1)
+
+            for (let i = 0; i < users.length; i++) {
+                user = users[i]
+
+                r = document.createElement("tr")
+                r.setAttribute("id", i)
+
+                c1 = document.createElement("td")
+                c1.innerHTML = user.userId
+
+                c2 = document.createElement("td")
+                c2.innerHTML = user.firstName
+
+                c3 = document.createElement("td")
+                c3.innerHTML = user.email
+
+                c4 = document.createElement("td")
+                c4.innerHTML = user.password
+
+                c5 = document.createElement("td")
+                c5.innerHTML = "<button onclick='deleteRecord(" + i + ")' >Delete</button>"
+
+                r.appendChild(c1);
+                r.appendChild(c2);
+                r.appendChild(c3);
+                r.appendChild(c4);
+                r.appendChild(c5);
+                tbody.appendChild(r);
+
+            }
+            document.getElementById("mytable").appendChild(table)
+            console.log("done table");
+        }
+
+
+        function deleteRecord(rowId) {
+            let tr = document.getElementById(rowId)
+            tr.remove()
+
+            users.splice(rowId, 1);
+
+        }
+
+        function logout() {
+            let myDataTable = document.getElementById("myDataTable")
+            myDataTable.remove()    
+            let mytable = document.getElementById("mytable")
+            mytable.style.display = "none"
+            l = document.getElementById("login")
+            l.style.display = "block"
+        }
+
+        function validateFirstName() {
+            let firstName = document.reg.firstName.value;
+
+            var onlyAlphabets = /^[a-zA-Z]+$/; //a-z A-Z atleat 1 char or n char  
+
+            if (firstName == undefined || firstName.trim().length == 0) {
+                document.getElementById("firstNameError").innerHTML = "Please Enter FirstName"
+            } else if (onlyAlphabets.test(firstName) == false) {
+                document.getElementById("firstNameError").innerHTML = "Please Enter Only alphabets [ a-z or A-Z ] "
+            }
+            else {
+                document.getElementById("firstNameError").innerHTML = ""
+            }
+
+
+        }
+
+
+        function validateEmail() {
+            let email = document.reg.email.value;
+            var emailReg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if (email == undefined || email.trim().length == 0) {
+                document.getElementById("emailError").innerHTML = "Please Enter Email"
+
+            } else if (emailReg.test(email) == false) {
+                document.getElementById("emailError").innerHTML = "Invalid Email"
+            }
+            else {
+                document.getElementById("emailError").innerHTML = ""
+            }
+
+        }
+    </script>
+</body>
+
+</html>

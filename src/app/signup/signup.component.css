@@ -1,0 +1,15 @@
+  
+h1{
+    font-size: xx-large;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blueviolet;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+label{
+    font-size: x-large;
+    color: salmon;
+    font-weight: 600;
+    text-decoration: underline;
+}
